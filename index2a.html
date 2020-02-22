@@ -6,32 +6,35 @@
     <script>
     document.write("Module 02 Activity");
 
-    function sum(num1){
-      var sum=num1+num1;
-      document.write("<br>&nbsp;&nbsp;&nbsp:The sum of 2 of these integers is " +sum);
-      return num1, sum;
+    function sum(num1, num2){
+      var sum=num1+num2;
+      document.write("<br>&nbsp;&nbsp;&nbsp:The first integer you entered was " +num1);
+      document.write("<br>&nbsp;&nbsp;&nbsp:The second integer you entered was " +num2);
+      document.write("<br>&nbsp;&nbsp;&nbsp:The sum of 2 of your two numbers is " +sum);
+      return num1, num2, sum;
     }
-    function multiply(num1){
-      var multiply=num1*num1;
-      document.write("<br>&nbsp;&nbsp;&nbsp:This integer multiplied is " +multiply);
-      return num1;
+    function multiply(num1, num2){
+      var multiply=num1*num2;
+      document.write("<br>&nbsp;&nbsp;&nbsp:These 2 integers multiplied are " +multiply);
+      return num1, num2;
     }
-    function triple(num1){
-      var triple=num1+num1+num1;
-      document.write("<br>&nbsp;&nbsp;&nbsp:This integer tripled is " +triple);
-      return num1;
+    function triple(num1, num2){
+      var triple=num1+num2+num1+num2+num1+num2;
+      document.write("<br>&nbsp;&nbsp;&nbsp:The sum of these integers tripled is " +triple);
+      return num1, num2;
     }
-    function tripled(num1, sum){
-      var tripled=num1+sum;
+    function tripled(num1, num2, sum){
+      var tripled=sum*3;
       document.write("<br>&nbsp;&nbsp;&nbsp:Another way its tripled is " +tripled);
-      return num1;
+      return num1, num2, sum;
     }
 
-var num1=parseInt(prompt("Please enter an integer"));
-var sum=sum(num1);
-var multiply=multiply(num1);
-var triple=triple(num1);
-var tripled=tripled(num1,sum);
+var num1=parseInt(prompt("Please enter your first integer"));
+var num2=parseInt(prompt("Please enter a second integer"));
+var sum=sum(num1, num2);
+var multiply=multiply(num1, num2);
+var triple=triple(num1, num2);
+var tripled=tripled(num1,num2,sum);
 
     </script>
   </head>
