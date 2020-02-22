@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>M2 Activity</title>
+    <script>
+    document.write("Module 02 Activity");
+
+    function sum(num1){
+      var sum=num1+num1;
+      document.write("<br>&nbsp;&nbsp;&nbsp:The sum of 2 of these integers is " +sum);
+      return num1, sum;
+    }
+    function multiply(num1){
+      var multiply=num1*num1;
+      document.write("<br>&nbsp;&nbsp;&nbsp:This integer multiplied is " +multiply);
+      return num1;
+    }
+    function triple(num1,sum){
+      var triple=num1+num1+num1;
+      document.write("<br>&nbsp;&nbsp;&nbsp:This integer tripled is " +triple);
+      return num1;
+    }
+    function tripled(num1, sum){
+      var tripled=num1+sum;
+      document.write("<br>&nbsp;&nbsp;&nbsp:Another way its tripled is " +tripled);
+      return num1, sum;
+    }
+
+var num1=parseInt(prompt("Please enter an integer"));
+var sum=sum(num1);
+var multiply=multiply(num1);
+var triple=triple(num1);
+var tripled=tripled(num1,sum);
+
+    </script>
+  </head>
+  <body>
+    <p>Greg Shepherd Module 2 Activity</p>
+  </body>
+</html>
