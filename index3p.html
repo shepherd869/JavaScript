@@ -23,9 +23,9 @@
     $( document ).ready( function() {
         $( "form" ).submit( function(e) {
             e.preventDefault();
-            // Created placeholder for result - gets replaced on submission!
+            // Created placeholder for result
             $("p").text("");
-            // Replaces the user entered string with a placeholder
+            // Replaces the placeholder with the user entry
             var input = $( "#textInput" ).val();
             $( "#submission" ).html( input );
         })
