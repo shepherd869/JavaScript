@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>M4 Project</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    Module 04 Project<br>
+</head>
+
+<body>
+<div data-role="page">
+  <h1>Which tech company is repsonsible for 25% of South Korea's GDP?</h1>
+  <form>
+      <input type="text" id="textInput">
+      <input type="submit" value="Submit Answer" id="submitButton">
+  </form>
+  <br>
+
+  <span id="submission"></span>
+  <script>
+  var input;
+    $( document ).ready( function() {
+        $( "form" ).submit( function(e) {
+            e.preventDefault();
+            // Created placeholder for result
+            $("p").text("");
+            // Replaces the placeholder with the user entry
+            input = $( "#textInput" ).val();
+            if (input == "Samsung" || input == "samsung"){
+            $( "#submission" ).html( input + " is Correct!!" );
+          } else {
+            $( "#submission" ).html( input + " is incorrect, Try again! hint: they are the main mobile phone competitor to apple!");
+          };
+        })
+    });
+
+  </script>
+
+<p>Your response will be displayed here!</p>
+</body>
+</html>
