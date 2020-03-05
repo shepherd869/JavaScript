@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+      <title>M4 Activity</title>
+  </head>
+
+  <body>
+    <p id="demo"></p>
+    <script>
+    var num1=parseInt(prompt("Please enter your first number"));
+    var num2=parseInt(prompt("Please enter your second number"));
+    var num3=parseInt(prompt("Please enter your third number"));
+    var arr1;
+    var arr2;
+
+    arr1 = new Array(+num1, +num2, +num3);
+
+    document.write("Your entries were: <br>");
+    for(var i=0; i<3; i++)
+    {
+      document.write("<br>"+arr1[i]+"<br>");
+    }
+
+    document.write("<br>Your entries sorted numerically are : <br>");
+    arr2 = arr1.sort();
+    for(var x=0; x<3; x++)
+    {
+      document.write("<br>"+arr2[x]+"<br>")
+    }
+
+    </script>
+  </body>
+</html>
