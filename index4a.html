@@ -16,18 +16,31 @@
 
     arr1 = new Array(+num1, +num2, +num3);
 
+    // display user entries for verification
     document.write("Your entries were: <br>");
-    for(var i=0; i<3; i++)
+    for(var i=0; i<3; i)
     {
       document.write("<br>"+arr1[i]+"<br>");
+      i++
     }
 
+    // display numerically sorted data
     document.write("<br>Your entries sorted numerically are : <br>");
     arr2 = arr1.sort();
     for(var x=0; x<3; x++)
     {
       document.write("<br>"+arr2[x]+"<br>")
     }
+
+    // Conditional statement added as per assignment instructions
+    if(num1%2==0 && num2%2==0 && num3%2==0 ){
+      document.write("<br>You have used all even numbers!")
+    } else if(num1%2!=0 && num2%2!=0 && num3!=0) {
+      document.write("<br>You have used all odd numbers!")
+    } else {
+      document.write("<br>You have used a combination of odd and even numbers!")
+    }
+
 
     </script>
   </body>
