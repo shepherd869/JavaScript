@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+  function getFormData() {
+    var firstname= document.forms["myForm"]["fname"].value;
+    var lastname= document.forms["myForm"]["lname"].value;
+    var address= document.forms["myForm"]["address"].value;
+    var city= document.forms["myForm"]["city"].value;
+    var state= document.forms["myForm"]["state"].value;
+    document.getElementById("demoit").innerHTML="<table><tr><td>"+myForm.fname.value+"</td><td>"+myForm.lname.value+"</td><td>"+myForm.address.value+"</td><td>"+myForm.city.value+"</td><td>"+myForm.state.value+"</td></tr></table>"
+  }
+  function clearFormData(){
+    myForm.fname.value="";
+    myForm.lname.value="";
+    myForm.address.value="";
+    myForm.city.value="";
+    myForm.state.value="";
+  }
+  </script>
+
+<h3>Functions to get values from a form!</h3>
+
+  <form id='myForm' method='Post'>
+      First name: <input type='text' name='fname' value=' '><br>
+      Last name: <input type='text' name='lname' value=' '><br>
+      Address: <input type='text' name='address' value=' '><br>
+      City: <input type='text' name='city' value=' '><br>
+      State: <input type='text' name='state' value=' '><br>
+      <input type='submit' value='Submit' onclick='getFormData(); return false'>&nbsp;&nbsp;&nbsp;
+      <input type='submit' value='Clear Form' onclick='clearFormData(); return false'>
+  </form>
+
+<p id="demoit"></p>
+
+</body>
+</html>
