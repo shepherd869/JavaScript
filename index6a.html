@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>M6 Activity</title>
+
+<script>
+function calc(){
+var length=document.forms["myForm"]["length"].value;
+var width=document.forms["myForm"]["width"].value;
+var area=length*width;
+document.getElementById('result').innerHTML=area;
+return false
+}
+</script>
+
+</head>
+
+<body>
+
+<p>This form will calculate the square footage of a rectangular room!
+
+<form id='myForm' method='Post'>
+Length<input type="text" id="length"/><br><br>
+Width<input type="text" id="width" /><br><br>
+<input type="button" onClick="calc(); return false" value="Calculate Area" />
+</form>
+<br>
+
+<div id="result"></div>
+</body>
+</html>
